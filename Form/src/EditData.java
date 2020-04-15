@@ -77,6 +77,7 @@ public class EditData extends JFrame{
             statement.executeUpdate("UPDATE data_mhs SET nama='" + tfNama.getText() + "'," + "alamat ='" + 
                     tfAlamat.getText() + "'WHERE nim='" + tfnim.getText() + "'");
             JOptionPane.showMessageDialog(null,"Data berhasil di Update!", "Hasil", JOptionPane.INFORMATION_MESSAGE);
+            statement.close();
         }catch(SQLException ex){
             JOptionPane.showMessageDialog(null,"Data Gagal di Update!", "Hasil", JOptionPane.ERROR_MESSAGE);
         }catch(ClassNotFoundException ex){
