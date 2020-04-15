@@ -47,8 +47,8 @@ public class LihatData extends JFrame{
             resultSet = statement.executeQuery(sql);
             int p = 0;
             while(resultSet.next()){
-                data[p][0] = resultSet.getString("nama");
-                data[p][1] = resultSet.getString("nim");
+                data[p][0] = resultSet.getString("nim");
+                data[p][1] = resultSet.getString("nama");
                 data[p][2] = resultSet.getString("alamat");
                 p++;
             }
