@@ -60,6 +60,7 @@ public class HapusData extends JFrame{
            statement = koneksi.getKoneksi().createStatement();
            statement.executeUpdate("DELETE FROM data_mhs WHERE nim='" + tfnim.getText() +"'");
            JOptionPane.showMessageDialog(null,"Data berhasil di Hapus!", "Hasil", JOptionPane.INFORMATION_MESSAGE);
+           statement.close();
         }catch(SQLException ex){
             JOptionPane.showMessageDialog(null,"Data Gagal di Hapus!", "Hasil", JOptionPane.ERROR_MESSAGE);
         }catch(ClassNotFoundException ex){
